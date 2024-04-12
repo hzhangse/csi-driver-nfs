@@ -1,0 +1,5 @@
+FROM scratch
+COPY ../deploy/v4.6.0 ./csi-driver-nfs
+COPY images ./images
+COPY registry ./registry
+CMD ["kubectl apply -f ./csi-driver-nfs"]
